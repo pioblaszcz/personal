@@ -1,5 +1,28 @@
 
 
+$(document).ready(function () {
+    // typing animation
+    (function ($) {
+      $.fn.writeText = function (content) {
+        var contentArray = content.split(""),
+          current = 0,
+          elem = this;
+        setInterval(function () {
+          if (current < contentArray.length) {
+            elem.text(elem.text() + contentArray[current++]);
+          }
+        }, 80);
+      };
+    })(jQuery);
+
+    $("#holder").writeText("WEB DEVELOPER + DESIGNER");
+});
+  
+    // input text for typing animation
+
+
+
+
 const slider = document.querySelector('.slider');
 
 function activate(e) {
@@ -171,7 +194,7 @@ const shaderData = {
   
       // Create a new instance of the EffectCanvas which is going to produce all of the visuals
       this.effectCanvas = new EffectCanvas(this.width, this.height, this.loader);
-  
+        console.log('loaded')
       // Resize listener for the canvas to fill browser window dynamically
       window.addEventListener('resize', () => this.resizeCanvas(), false);
   
