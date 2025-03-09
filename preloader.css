@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+#preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
+    background-color: black;
+    position: fixed;
+    transition: 1s;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+}
+
+p {
+    font-family: "JetBrains Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 2ch;
+    line-height: 2ch;
+    overflow: clip;
+    color: white;
+    transition: 1.6s cubic-bezier(.65,.05,0,1) transform;
+}
+
+.number-track {
+    width: 1ch;
+    transition: 1.8s cubic-bezier(.65,.05,0,1) transform;
+    pointer-events: none;
+    user-select: none;
+}
